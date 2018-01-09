@@ -1,7 +1,7 @@
 let AWS = require('aws-sdk');
 exports.handler = function(event, context, callback){
     console.log('Loading the Calc function');
-exports.handler = function(event, context, callback) {
+
     console.log('Received event:', JSON.stringify(event, null, 2));
     if (event.a === undefined || event.b === undefined || event.op === undefined) {
         callback("400 Invalid Input");
@@ -40,6 +40,3 @@ exports.handler = function(event, context, callback) {
     }
     callback(null, res);
 };
-
-
-}
